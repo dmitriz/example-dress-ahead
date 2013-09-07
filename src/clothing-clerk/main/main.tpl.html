@@ -1,0 +1,32 @@
+<div class="container-fluid main-layout">
+
+    <div class="navbar navbar-static-top header">
+        <div class="navbar-inner">
+
+            <a class="brand" href="#"><img src="/assets/images/logo.png" alt="Raven's Nest" /></a>
+
+            <!-- Everything you want hidden at 940px or less, place within here -->
+            <div class="nav-collapse collapse pull-right">
+                <ul class="nav">
+                    <!--li><a href="#/login" style="margin-top:5px;">Logout</a></li-->
+                    <li>
+                        <img ng-src="/assets/images/employees/{{ employee.id }}.jpg" alt="{{ employee.firstName }} {{ employee.lastName }}" />
+                        {{ employee.firstName }} {{ employee.lastName }}
+                    </li>
+                    <!-- <li><a class="btn btn-large" href="#">menu</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main row-fluid">
+    <ul class="sidebar span1">
+        <li class="active"><img src="/assets/images/clerk/icon-orders-active.png" ng-click="openOrders()"></li>
+        <li><img src="/assets/images/clerk/icon-add-order.png" ng-disabled="true"></li>
+        <li><img src="/assets/images/clerk/icon-messages.png" ng-disabled="true"></li>
+        <li><img src="/assets/images/clerk/icon-search.png" ng-disabled="true"></li>
+        <li><img src="/assets/images/clerk/icon-add-customer.png" ng-disabled="true"></li>
+    </ul>
+    <div class="content span11" ng-view></div>
+</div>

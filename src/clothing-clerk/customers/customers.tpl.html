@@ -1,0 +1,38 @@
+<div class="customers row-fluid">
+    <div class="customer span3" ng-repeat="customer in customers | orderBy:'order.timestamp':true">
+
+        <!-- header -->
+        <div class="customer-info" ng-click="showCustomer(customer)">
+            <img src="/assets/images/customers/{{ customer.firstName | lowercase }}.jpg" />
+            <div>
+                <span class="customer-name">{{customer.firstName}} {{customer.lastName}}</span><br />
+                <span>Date: {{customer.order.timestamp | date:'MM/dd/yyyy'}}</span><br />
+                <span>Time: {{customer.order.timestamp | date:'shortTime'}}</span>
+            </div>
+        </div>
+
+        <!-- add item -->
+        <div class="add-item">
+            <button ng-click="addItemToOrder(customer.order)">Add Item</button>
+        </div>
+
+        <!-- line items -->
+        <div class="line-items row-fluid">
+            <div class="line-item" ng-repeat="lineItem in customer.order.lineItems">
+                <div class="item-name">{{lineItem.name}}</div>
+                <div>SKU: {{lineItem.itemCode}}</div>
+                <div>QTY: {{lineItem.unitQty}}</div>
+                <div class="item-price">Price: {{lineItem.price*lineItem.unitQty*.01|currency}}</div>
+            </div>
+        </div>
+
+        <!-- summary -->
+        <div class="summary">
+            <div>Subtotal: <span>{{customer.order.subTotal*.01|currency}}</span></div>
+            <div>Tax: <span>{{customer.order.tax*.01|currency}}</span></div>
+            <div>Total: <span>{{customer.order.total*.01|currency}}</span> </div>
+            <button ng-disabled="true">Purchase</button>
+        </div>
+
+    </div>
+</div>

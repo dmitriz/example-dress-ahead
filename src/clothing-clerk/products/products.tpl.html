@@ -1,0 +1,47 @@
+<div class="product-layout">
+    <div class="products row-fluid">
+        <div class="categories span9">
+            <div class="productColumns">
+                <div class="category" ng-repeat="category in categories">
+                    <div class="category-name">{{category.name}}</div>
+                    <div class="product" ng-repeat="item in category.items" ng-click="addItemToOrder(item, order)">
+                        <img ng-src="/assets/images/clothing/products/{{ item.id }}.jpg" />
+                        <div class="product-name">{{item.name}}</div>
+                        <div class="product-price">{{item.price*.01|currency}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="order span3">
+            <div class="customer-data row-fluid">
+                <div class="customer-photo span4" ng-click="showCustomer(customer)"><img src="/assets/images/customers/{{ customer.firstName | lowercase }}.jpg"></div>
+                <div class="customer-name span8">{{customer.firstName}} {{customer.lastName}}</div>
+            </div>
+
+            <!-- line items -->
+            <div class="line-items row-fluid">
+                <div class="line-item" ng-repeat="lineItem in order.lineItems">
+                    <div class="item-name">{{lineItem.name}}</div>
+                    <div>SKU: {{lineItem.itemCode}}</div>
+                    <div class="qty-price">QTY: {{lineItem.unitQty}}<span class="item-price">{{lineItem.price*lineItem.unitQty*.01|currency}}</span></div>
+                </div>
+            </div>
+
+            <!-- summary -->
+            <div class="summary">
+                <div>Subtotal: <span>{{order.subTotal*.01|currency}}</span></div>
+                <div>Tax: <span>{{order.tax*.01|currency}}</span></div>
+                <div class="total-price">Total: <span>{{order.total*.01|currency}}</span></div>
+
+                <div class="purchase-button-container">
+                    <button  ng-disabled="true">Purchase</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="options-buttons">
+        <button ng-disabled="true">Enter SKU</button>
+        <button ng-disabled="true">Scan Code</button>
+        <button ng-disabled="true">Cancel</button>
+    </div>
+</div>

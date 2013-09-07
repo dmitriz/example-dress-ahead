@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="clothing-customer" ng-controller="MainController">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="cache-control" content="no-cache">
+    <title>Raven's Nest</title>
+    <link href="/assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/assets/css/clothing-customer/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <meta http-equiv="pragma" content="no-cache" />
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.ie.css" />
+    <![endif]-->
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/assets/js/shared-libs.js"></script>
+    <script src="/assets/js/clothing-customer.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet-src.js"></script>
+    <script src="http://localhost:35729/livereload.js"></script>
+</head>
+<body>
+
+    <div ng-include="'clothing-customer/main/main.tpl.html'"></div>
+
+</body>
+</html>

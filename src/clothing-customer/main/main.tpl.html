@@ -1,0 +1,28 @@
+<div class="container-fluid main-layout">
+
+    <div class="navbar navbar-static-top header">
+        <div class="navbar-inner">
+
+            <a class="brand" href="#"><img src="/assets/images/logo.png" alt="Raven's Nest" /></a>
+
+            <!-- Everything you want hidden at 940px or less, place within here -->
+            <div class="pull-right nav-search-container">
+                <form id="searchForm" class="navbar-search pull-left" >
+                    <input type="text" class="search-query" ng-disabled="true">
+                    <button ng-disabled="true"><img src="/assets/images/search-button-icon.png" alt="search" /></button>
+                </form>
+                <ul class="nav">
+                    <!--li><a href="#/login" style="margin-top:5px;">Logout</a></li-->
+                    <li><a class="btn btn-large cart" href="#/cart"><img src="/assets/images/cart-button-icon.png" alt="shopping cart" /></a></li>
+                    <!-- <li><a class="btn btn-large" href="#">menu</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row-fluid" ng-view></div>
+
+    <div class="row-fluid">
+        <div class="span12 footer"></div>
+    </div>
+</div>

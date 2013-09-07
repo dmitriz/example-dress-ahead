@@ -1,0 +1,27 @@
+<h1 class="span12 crumbs" onclick="history.go(-1);"><img src="/assets/images/crumb-arrow.png" alt="back"  />{{ product.name }}</h1>
+
+<div class="product-detail-wrapper">
+    <div class="row-fluid productDetails">
+            <div class="span4 productImage">
+                <img id="primaryImage"
+                     ng-src="/assets/images/clothing/products/{{ product.code }}-{{ selectedImageIndx }}.jpg" alt="{{ product.name }}" />
+            </div>
+
+            <div class="span2 productModifiers">
+                <img ng-src="/assets/images/clothing/products/{{ product.code }}-1.jpg" alt="{{ product.name }}" ng-click="selectedImageIndx = 1" />
+                <img ng-src="/assets/images/clothing/products/{{ product.code }}-2.jpg" alt="{{ product.name }}" ng-click="selectedImageIndx = 2" />
+                <img ng-src="/assets/images/clothing/products/{{ product.code }}-3.jpg" alt="{{ product.name }}" ng-click="selectedImageIndx = 3" />
+            </div>
+
+            <div class="span6 productDescription">
+                <h1>{{ product.name }}</h1>
+                <span class="product-price">{{ product.price/100 | currency }}</span>
+                <p ng-bind-html-unsafe="product.description"></p>
+
+                <button ng-click="addToCart()">Add to Cart <img src="/assets/images/button-icon-cart.png" alt="add to cart" /></button>
+                <button ng-disabled="true">Add to Fav's <img src="/assets/images/button-icon-star.png" alt="add to favorites" /></button>
+            </div>
+
+    </div>
+</div>
+

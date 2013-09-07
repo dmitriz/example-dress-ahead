@@ -1,0 +1,172 @@
+.clearfix {
+    zoom: 1;
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.home-banner {
+    margin: 0;
+
+    .welcome-message {
+        position: absolute;
+        color: #fff;
+        margin-left: 38px;
+        margin-top: 20px;
+        font-family: 'Oswald';
+        font-weight: 700;
+
+        h2 {
+            font-size: 1.3em;
+            line-height: 1.3em;
+            margin: 0;
+            padding: 0;
+        }
+        h3 {
+            font-size: 1.1em;
+            line-height: 1.1em;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            color: #9b584c;
+        }
+        .customer-name {
+            color: #ebcdd1;
+        }
+    }
+}
+
+.row-fluid [class*="span"].product-list-wrapper {
+    margin-left: 0;
+}
+
+.productCategory {
+    width: 322px;
+    height: 276px;
+    background: url('/assets/images/clothing/categories/background.png');
+    color: #373033;
+    padding: 0;
+    margin-left: 24px;
+    position: relative;
+    float: left;
+    extend: clearfix;
+
+    div.category-name {
+        top: 14px;
+        left: 28px;
+        font: 1.5em 'Oswald';
+        text-transform: uppercase;
+        font-weight: 700;
+        position: absolute;
+    }
+
+    div.view-all {
+        position: absolute;
+        right: 24px;
+        top: 16px;
+        font: 1.2em 'Oswald';
+    }
+
+    a {
+        color: #373033;
+        text-transform: lowercase;
+    }
+
+    img {
+        border: none;
+        position: absolute;
+        top: 49px;
+        left: 18px;
+        right: 14px;
+        bottom: 14px;
+        webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, .5);
+        box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, .5);
+    }
+}
+
+.productCarousel {
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+
+    .scroller {
+        list-style-type: none;
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .slide {
+            position: relative;
+            width: 164px;
+            margin-left: 10px;
+            margin-right: 10px;
+            background-color: #ffffff;
+            text-align: center;
+            display: inline-block;
+            list-style: none;
+        }
+
+        div {
+            color: #373033;
+            font-family: 'Oswald', sans-serif;
+
+            a {
+                color: #373033;
+                width:50px;
+                text-overflow: ellipsis;
+            }
+        }
+
+        .item-name {
+            padding-top: 15px;
+
+
+            a {
+                font-weight: 300;
+            }
+        }
+        .item-price {
+            font-size: 1.2em;
+            padding-bottom: 15px;
+        }
+
+        img {
+            width: 100%;
+            overflow: hidden;
+        }
+    }
+
+    //product slider controls
+    #gallery-controls {
+        position: relative;
+        z-index: 999;
+
+        #gallery-prev {
+            position: absolute;
+            left: 362px;
+            top: 90px;
+            img {
+                transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                -webkit-transform: rotate(180deg);
+            }
+        }
+        #gallery-next {
+            position: absolute;
+            right: 5px;
+            top: 90px;
+        }
+    }
+}

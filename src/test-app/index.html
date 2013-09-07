@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="test-app" ng-controller="MainController">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="cache-control" content="no-cache">
+    <title>Test App</title>
+    <link href="/assets/css/test-app.css" rel="stylesheet">
+    <script src="/assets/js/shared-libs.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/assets/js/test-app.js"></script>
+
+    <script>
+        var socket = io.connect('http://localhost');
+        socket.on('news', function (data) {
+            console.log(data);
+            socket.emit('my other event', { my: 'data' });
+        });
+    </script>
+</head>
+<body>
+
+<div ng-view></div>
+
+</body>
+</html>

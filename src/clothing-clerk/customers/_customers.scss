@@ -1,0 +1,85 @@
+.customers {
+  font-family: 'Oswald';
+
+  .customer {
+
+    .customer-info, .add-item {
+      background: #fff;
+    }
+
+    .customer-info {
+      padding: 8px 8px 16px 8px;
+      font-size: 1.1em;
+      line-height: 1.6em;
+
+      .customer-name {
+        font-weight: 700;
+      }
+
+      img {
+        float: left;
+        height: 61px;
+        width: 61px;
+        margin-right: 12px;
+      }
+    }
+
+    .add-item {
+      padding: 10px 16px 10px 16px;
+      margin-top: 1px;
+
+      button {
+        font: 700 1.4em 'Oswald';
+        background: #fff;
+        width: 100%;
+      }
+    }
+
+    .row-fuid.line-item {
+      height: 100%;
+    }
+
+    .line-items {
+        background-color: rgba(63, 54, 52, 0.90);
+        color: #fff;
+        font-size: 1.2em;
+        font-weight: 300;
+        line-height: 1.6em;
+        min-height: 100%;
+
+        .line-item {
+            margin: 10px;
+
+            .item-name {
+                font-weight: bold;
+            }
+
+            .item-price {
+                text-align: right;
+            }
+        }
+    }
+
+    .summary {
+      background-color: rgba(63, 54, 52, 1);
+      padding: 30px 16px 14px 16px;
+      color: #fff;
+      font-size: 1.2em;
+      line-height: 1.6em;
+      font-weight: 300;
+
+      div {
+          span {
+              float: right;
+          }
+      }
+
+      button {
+          background-color: #666666;
+          color: #ffffff;
+          width: 100%;
+          margin-top: 30px;
+      }
+    }
+  }
+}

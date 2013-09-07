@@ -1,0 +1,31 @@
+<div class="span12 home-banner">
+    <div class="welcome-message">
+        <h3>Welcome Back</h3>
+        <h3 class="customer-name" ng-model="root">{{ customer.firstName }}</h3>
+        <h2 class="span12" ng-model="root">Just For You</h2>
+    </div>
+    <img src="/assets/images/home_banner.png" alt="Special savings just for you." />
+</div>
+
+<div class="span12 product-list-wrapper">
+    <div ng-repeat="category in categories | orderBy:'name' " category-repeat-directive>
+        <div class="productCarousel">
+            <div class="productCategory">
+                <div class="category-name">{{category.name}}</div>
+                <div class="view-all"><a href="#/c/{{category.id}}">view all</a></div>
+                <img ng-src="/assets/images/clothing/categories/{{category.id}}.jpg" alt="{{category.name}}" />
+            </div>
+            <div id="gallery-controls">
+                <a id="gallery-prev" ng-mousedown="startScroll(category, -1)" ng-mouseup="stopScroll(category, -1)"><img src="/assets/images/swipe-arrow.png" alt="previous products" /></a>
+                <a id="gallery-next" ng-mousedown="startScroll(category, 1)" ng-mouseup="stopScroll(category, 1)"><img src="/assets/images/swipe-arrow.png" alt="next products" /></a>
+            </div>
+            <ul class="scroller" scroll-left="category.scrollLeft">
+                <li class="slide" ng-repeat="item in category.items |  orderBy:'name' ">
+                    <a href="#/p/{{ item.id }}"><img ng-src="/assets/images/clothing/products/{{ item.code }}-1.jpg" alt="{{item.name}}" /></a>
+                    <div class="item-name"><a href="#/p/{{ item.id }}">{{item.name}}</a></div>
+                    <div class="item-price">{{ item.price/100 | currency }}</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

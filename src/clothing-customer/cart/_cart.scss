@@ -1,0 +1,148 @@
+.page-header {
+  width: 300px;
+  margin: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  border-bottom: none !important;
+}
+
+.cart-summary {
+  background: rgba(0, 0, 0, .5);
+  position: absolute;
+  top: 78px;
+  bottom: 0;
+  right: 0;
+  font: 1.4em 'Oswald';
+  color: #fff;
+  width: 282px;
+  height: 100%;
+
+  .page-header {
+    padding: 16px 0 16px 35px;
+    padding: 16px 0 16px 35px;
+    font-size: 1.8em;
+  }
+
+  table {
+    border-spacing: 0px 0px;
+    border-collapse: collapse;
+
+    td {
+      padding: 6px 0 6px 0px;
+      border-bottom: 1px ridge rgba(0, 0, 0, 0.7);
+    }
+
+    .subtotal {
+      border-top: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+    }
+
+    .left-column {
+      padding-left: 35px;
+    }
+
+    .total {
+      color: #e0bea5;
+      padding-top: 22px;
+    }
+
+    .total {
+      border-bottom: none;
+    }
+
+    .tax, .total {
+      border-top: 1px ridge rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  .action-buttons {
+    width: 215px;
+    margin-top: 61px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  button {
+    color: #fff;
+    display: block;
+    font-size: 1.5em;
+    width: 215px;
+    margin-bottom: 30px;
+  }
+
+  p {
+    width: 200px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+    font-style: italic;
+    font-size: .8em;
+  }
+}
+
+.cart {
+  font: 1em 'Oswald';
+  color: #fff;
+  margin-left: 28px;
+
+  .span8 {
+  }
+
+  #cart-item-table {
+    border-spacing: 0px 2px;
+    border-collapse: separate;
+    color: #372627;
+    width: 100%;
+
+    td {
+      background: #fff;
+    }
+
+    .item-header-row td {
+      color: #fff;
+      font: 1.2em 'Oswald';
+      background: none;
+      padding-bottom: 5px;
+    }
+
+    tr.item-row {
+      background: #fff;
+      width: 100%;
+    }
+
+    td.item-image {
+      padding: 2px;
+
+      img {
+        width: 104px;
+        height: 132px;
+        -webkit-box-shadow: 0px 2px 1px 1px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 2px 1px 1px rgba(0,0,0,0.2);
+        box-shadow: 0px 2px 1px 1px rgba(0,0,0,0.2);
+      }
+    }
+
+    td.item-name, td.item-quantity {
+      font: normal 300 1.3em 'Oswald';
+    }
+
+    td.item-price {
+      font: 1.4em 'Oswald';
+    }
+
+    td.text-center {
+      text-align: center;
+    }
+
+    button.item-remove-button {
+      width: 35px;
+      height: 35px;
+      background: url('/assets/images/remove-button-icon.png') no-repeat;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

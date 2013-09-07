@@ -1,0 +1,9 @@
+<h1 class="span12 crumbs" onclick="history.go(-1);"><img src="/assets/images/crumb-arrow.png" alt="back" />{{ category.name }}</h1>
+
+<ul class="media-grid" >
+    <li class="slide" ng-repeat="product in category.items | orderBy:'name' ">
+        <a href="#/p/{{ product.id }}"><img ng-src="/assets/images/clothing/products/{{ product.id }}.jpg" alt="{{product.name}}" /></a>
+        <div class="item-name"><a href="#/p/{{ product.id }}">{{product.name}}</a></div>
+        <div class="item-price">{{ product.price/100 | currency }}</div>
+    </li>
+</ul>

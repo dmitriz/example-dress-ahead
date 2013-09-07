@@ -1,0 +1,61 @@
+<h1 class="page-header">Shopping Cart</h1>
+
+<div class="cart-summary">
+    <h1 class="page-header">Summary</h1>
+    <table width="100%">
+        <tr class="subtotal-row">
+            <td class="left-column subtotal">Subtotal:</td>
+            <td class="subtotal">{{ calculateSubTotal() | currency }}</td>
+        </tr>
+        <tr>
+            <td class="left-column">Shipping:</td>
+            <td>{{ calculateShipping() | currency }}</td>
+        </tr>
+        <tr class="tax-row">
+            <td class="left-column tax">Tax:</td>
+            <td class="tax">{{ calculateTax() | currency }}</td>
+        </tr>
+        <tr>
+            <td class="left-column total"><b>TOTAL:</b></td>
+            <td class="total">{{ calculateTotal() | currency }}</td>
+        </tr>
+    </table>
+
+    <div class="action-buttons">
+        <button ng-click="tryOnInStore()">Try In Store</button>
+        <button ng-click="cancelOrder()">Cancel Order</button>
+        <button ng-disabled="true">Purchase</button>
+    </div>
+
+    <p>
+        YES! You can have these clothes waiting for you in the dressing room when you arrive!
+    </p>
+
+</div>
+
+<div class="row-fluid cart">
+    <div class="span8">
+        <table id="cart-item-table" ng-model="root">
+            <tr class="item-header-row">
+                <td></td>
+                <td>Product Name</td>
+                <td class="text-center">Quantity</td>
+                <td class="text-center">Price</td>
+                <td class="text-center">Remove</td>
+            </tr>
+            <tr ng-repeat="item in order.lineItems" class="item-row">
+                <td class="item-image">
+                    <img ng-src="/assets/images/clothing/products/{{ item.itemCode }}-1.jpg"/>
+                </td>
+                <td class="item-name">{{ item.name }}</td>
+                <td class="item-quantity text-center">{{ item.unitQty }}</td>
+                <td class="item-price text-center">{{ item.price/100 | currency }}</td>
+                <td class="text-center">
+                    <button class="item-remove-button" ng-click="removeItem(item.id)"></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+

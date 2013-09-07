@@ -1,0 +1,59 @@
+// common
+@import "../common/common";
+
+// features
+@import "cart/cart";
+@import "category/category";
+@import "home/home";
+@import "main/main";
+@import "product/product";
+@import "try-in-store/try-in-store";
+@import "login/login";
+
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Droid Serif', serif;
+}
+
+body {
+  background: url("/assets/images/background.jpg") fixed;
+}
+
+.container-fluid {
+  margin: 0;
+}
+
+.page-header {
+   font: 2.8em 'Lobster';
+   color: #fff;
+   border: none;
+   margin-left: 40px;
+ }
+
+.row-fluid [class*="span"].crumbs {
+    background: url('/assets/images/crumbtrail-background.png') no-repeat;
+    font: 1.4em 'Oswald';
+    font-weight: 300;
+    font-style: italic;
+    color: #372627;
+    padding: 8px;
+    padding-right: 40px;
+    margin: 0 0 0 40px;
+    text-overflow: ellipsis;
+
+    img {
+      margin: 6px 16px 6px 6px;
+    }
+  }
+
+button {
+  background: url('/assets/images/product-button-background.png');
+  font: 2em 'Lobster';
+  border: none;
+}
+
+button[disabled] {
+    color: #cccccc !important;
+}

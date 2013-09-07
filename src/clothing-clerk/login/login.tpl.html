@@ -1,0 +1,18 @@
+<div>
+    <div class="modal-header">
+        <h3>Login</h3>
+    </div>
+    <div class="modal-body form">
+        <form  class="form-horizontal">
+            <div class="control-group">
+                <label>Select Employee</label>
+                <select name="employee" ng-model="loginData.employee" required>
+                    <option selected="selected" value="{{ employee.id }}" ng-repeat="employee in employeeList">{{ employee.firstName }} {{ employee.lastName }}</option>
+                </select>
+            </div>
+            <div class="form-actions">
+                <button class="btn btn-primary" ng-click="loginBtnHandler()">Login</button>
+            </div>
+        </form>
+    </div>
+</div>

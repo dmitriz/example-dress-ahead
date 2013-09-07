@@ -1,0 +1,72 @@
+<div class="customer row-fluid">
+    <div class="customer-info span3">
+        <img src="/assets/images/customers/{{ customer.firstName | lowercase}}.jpg" ng-click="showCustomer(customer)" />
+        <div class="customer-name">{{customer.firstName}} {{customer.lastName}}</div>
+        <div class="customer-details">
+            <div>Customer ID: {{customer.id}}</div>
+            <div>
+                Member Since:<br />
+                {{customer.customerSince|date}}
+            </div>
+            <div>Email:
+                <div ng-repeat="emailAddress in customer.emailAddresses">{{emailAddress.emailAddress}}</div>
+            </div>
+            <div>Phone:
+                <div ng-repeat="phoneNumber in customer.phoneNumbers">{{phoneNumber.phoneNumber}}</div>
+            </div>
+            <div>Address:
+                <div ng-repeat="address in customer.addresses">
+                    {{address.address1}}<br />
+                    {{address.address2}}<br />
+                    {{address.address3}}<br />
+                    {{address.city}}, {{address.state}} {{address.zip}}
+                </div>
+            </div>
+        </div>
+        <div class="customer-tabs">
+            <button ng-disabled="true">Current Order</button>
+            <button ng-disabled="true">Order History</button>
+            <button ng-disabled="true">Measurements</button>
+            <button ng-disabled="true">Preferences</button>
+        </div>
+    </div>
+    <div class="current-order-tab span9">
+        <h1>Current Order</h1>
+        <div class="line-items">
+            <div class="line-item row-fluid" ng-repeat="lineItem in order.lineItems">
+                <div class="line-item-photo span2">
+                    <img ng-src="/assets/images/clothing/products/{{lineItem.itemCode}}-1.jpg" />
+                </div>
+                <div class="span6">
+                    <div class="line-item-name">{{lineItem.name}}</div>
+                    <div class="line-item-details">
+                        <div>SKU: <span>{{lineItem.code}}</span></div>
+                        <!--
+                        <div>Size: <span>{{lineItem.details.size}}</span></div>
+                        <div>Color: <span>{{lineItem.details.color}}</span></div>
+                        -->
+                    </div>
+                </div>
+                <div class="line-item-qty span1">
+                    {{lineItem.qty}}
+                </div>
+                <div class="line-item-price span2">
+                    {{lineItem.price*.01|currency}}
+                </div>
+                <div class="line-item-remove span1">
+                    <button class="item-remove-button" ng-click="removeItem(lineItem.id)"></button>
+                </div>
+            </div>
+        </div>
+        <div class="order-summary">
+            <div>Subtotal: <span>{{order.subTotal*.01|currency}}</span></div>
+            <div>Tax: <span>{{order.tax*.01|currency}}</span></div>
+            <div class="total">Total: <span>{{order.total*.01|currency}}</span></div>
+        </div>
+        <div class="order-actions">
+            <button ng-click="addItemToOrder(order)">Add Item</button>
+            <button ng-click="saveOrder(order)" ng-disabled="true">Save</button>
+            <button ng-click="purchaseOrder(order)" ng-disabled="true">Purchase</button>
+        </div>
+    </div>
+</div>

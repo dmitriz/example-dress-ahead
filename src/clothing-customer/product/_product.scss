@@ -1,0 +1,73 @@
+.product-detail-wrapper {
+  position: relative;
+  width: 959px;
+  height:540px;
+  background: url('/assets/images/clothing/products/product-detail-wrapper-background.png') no-repeat;
+  background-size: contain;
+  padding: 0;
+  top: 50px;
+  margin-left: 28px;
+
+  .productDetails {
+      width: 948px;
+      height: 529px;
+      position: absolute;
+      top: 11px;
+      left: 14px;
+      background: url('/assets/images/clothing/products/product-detail-background.png') no-repeat;
+      background-size: contain;
+
+      .productImage {
+          padding: 12px;
+
+          img {
+            width: 356px;
+            /*height: 475px;*/
+          }
+      }
+
+      .productModifiers {
+          margin: 12px 57px 0 4px;
+          width: 88px;
+          height: 107px;
+
+          img {
+              clear: left;
+              margin-bottom: 20px;
+          }
+      }
+
+      .productDescription {
+          color: #372627;
+          padding: 40px 50px 36px 0;
+
+          h1 {
+            font: 2em 'Oswald';
+            font-weight: 700;
+          }
+          span.product-price {
+            font: 3em 'Oswald';
+          }
+          p {
+              margin-top: 20px;
+              margin-bottom: 20px;
+              font: .9em 'Droid Serif';
+          }
+
+          button {
+            color: #fff;
+            text-align: left;
+            padding-right: 12px;
+            padding-left: 12px;
+            width: 200px;
+            border: none;
+            margin-right:3px;
+            margin-bottom:3px;
+            img {
+              float: right;
+              margin-top: 5px;
+            }
+          }
+      }
+  }
+}

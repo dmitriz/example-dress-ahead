@@ -1,0 +1,20 @@
+<div>
+    <div class="modal-header">
+        <h3>Login</h3>
+    </div>
+    <div class="modal-body form">
+        <form  class="form-horizontal">
+            <div class="control-group">
+                <label>Select Customer</label>
+                <select name="customer" ng-model="loginData.customer" required>
+                    <option selected="selected" value="{{ customer.id }}" ng-repeat="customer in customerList">{{ customer.firstName }} {{ customer.lastName }}</option>
+                </select>
+            </div>
+            <div class="form-actions">
+                <button class="btn btn-primary"
+                        style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif"
+                        ng-click="loginBtnHandler()">Login</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,119 @@
+.customer {
+  font: 1em 'Oswald';
+  background: #fff;
+
+  .customer-info {
+    color: #373033;
+    padding: 16px;
+    font-weight: 300;
+    -webkit-box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.55);
+    -moz-box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.55);
+    box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.55);
+
+    img {
+      width: 185px;
+      height: 185px;
+      padding-bottom: 16px;
+    }
+
+    .customer-details {
+        div {
+          margin-bottom: 16px;
+        }
+    }
+
+    .customer-name {
+      font-weight: 700;
+      font-size: 1.2em;
+      margin-bottom: 16px;
+    }
+
+    .customer-tabs {
+      text-align: center;
+
+        button {
+          margin-top: 10px;
+          color: #ffffff;
+          width: 186px;
+          font-size: 1.7em;
+          padding-top: 6px;
+          padding-bottom: 6px;
+        }
+    }
+  }
+}
+
+.row-fluid [class*="span"].current-order-tab {
+  color: #373033;
+  font-size: 1.1em;
+  margin-left: 1px;
+
+  h1 {
+    margin-left: 28px;
+  }
+
+  .line-items {
+    margin-left: 28px;
+  }
+
+  .line-item {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #d8dbde;
+    padding-bottom: 16px;
+    padding-top: 16px;
+
+    .line-item-photo {
+      background: url('/assets/images/clothing/products/background-small.png') no-repeat center bottom;
+      padding-bottom: 9px;
+    }
+
+    .line-item-price, .line-item-qty {
+      font-size: 1.3em;
+    }
+
+    .line-item-remove {
+      height: 35px;
+
+      button.item-remove-button {
+        width: 35px;
+        height: 35px;
+        background: url('/assets/images/remove-button-icon.png') no-repeat;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  .order-summary {
+    margin-left: 28px;
+    text-align: right;
+
+    div {
+      span {
+        text-align: right;
+        display: block;
+        float: right;
+      }
+    }
+
+    .total {
+      font-weight: bold;
+    }
+  }
+
+  .order-actions {
+    margin-left: 28px;
+    text-align: center;
+    padding-top: 22px;
+    padding-bottom: 22px;
+
+    button {
+      background-color: #666666;
+      color: #ffffff;
+      width: 186px;
+      margin-left: 9px;
+      margin-right: 9px;
+    }
+  }
+}

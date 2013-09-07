@@ -1,0 +1,51 @@
+.map-info {
+  background: #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 22px;
+    width: 900px;
+    margin:0 auto;
+    position: relative;
+
+  p.instructions {
+    font: 1em 'Oswald';
+    font-weight: 300;
+    padding-bottom: 22px;
+    width: 500px;
+  }
+
+  #map {
+    width: 575px;
+    height: 300px;
+  }
+
+  .try-on-info {
+    float: right;
+    width: 250px;
+    color: #372627;
+    padding-top: 60px;
+    margin-right: 30px;
+
+    span {
+      font: 1.7em 'Oswald';
+    }
+
+    p {
+      font: 1em 'Droid Serif';
+    }
+  }
+
+  button {
+    color: #fff;
+    text-align: center;
+    border: none;
+  }
+
+  .try-store-details {
+    font: 1.2em 'Droid Serif';
+    font-weight: 300;
+    font-style: italic;
+    padding: 12px 0 0 12px;
+  }
+}
