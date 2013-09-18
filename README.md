@@ -3,13 +3,9 @@ ___
 
 This example is made up of two separate applications. These applications work together to allow customers to select clothes online and try them on in the store. This is important because not being able to try on clothing is often sited as a primary reason why customers fail to convert online. The first is the **Clerk** application that we envision would live in the dressing room or carried around the store by an employee.
 
-Visit a live version of the Clerk app [here](http://clover-clothing.elasticbeanstalk.com/clothing-clerk).
-
 ![Clerk 1](src/assets/images/ss-clerk-1.png)
 
 The second application is the the **Customer** application which showcases the possible integration with an existing online website. When users visit the website, instead of purchasing the clothes they would select the "Try on in store" option. This will flag the order and make it viewable in the clerk application. Once it appears in the clerk application, an employee can pull the clothes and have them ready for the customer when they arrive at the store.
-
-Visit a live version of the Customer app [here](http://clover-clothing.elasticbeanstalk.com/clothing-customer).
 
 ![Customer 1](src/assets/images/ss-customer-1.png)
 ![Customer 2](src/assets/images/ss-customer-2.png)
