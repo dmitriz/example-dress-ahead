@@ -26,7 +26,7 @@
     "grunt-contrib-watch": "0.5.3",
     "grunt-html2js": "0.6.0",
     "grunt-karma": "0.6.2",
-    "karma": "0.10.10",
+    "karma": "0.13.22",
     "connect-livereload": "0.6.1",
     "grunt-open": "0.2.4"
   },
